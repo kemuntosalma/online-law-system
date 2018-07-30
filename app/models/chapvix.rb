@@ -1,0 +1,2 @@
+class Chapvix < ApplicationRecord
+end

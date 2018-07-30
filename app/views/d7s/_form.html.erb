@@ -1,0 +1,32 @@
+<%= form_with(model: d7, local: true) do |form| %>
+  <% if d7.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(d7.errors.count, "error") %> prohibited this d7 from being saved:</h2>
+
+      <ul>
+      <% d7.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :section_number %>
+    <%= form.number_field :section_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crime %>
+    <%= form.text_area :crime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :law %>
+    <%= form.text_area :law %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

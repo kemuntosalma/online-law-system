@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Section number:</strong>
+  <%= @d8.section_number %>
+</p>
+
+<p>
+  <strong>Crime:</strong>
+  <%= @d8.crime %>
+</p>
+
+<p>
+  <strong>Law:</strong>
+  <%= @d8.law %>
+</p>
+
+<%= link_to 'Edit', edit_d8_path(@d8) %> |
+<%= link_to 'Back', d8s_path %>

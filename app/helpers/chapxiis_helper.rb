@@ -1,0 +1,2 @@
+module ChapxiisHelper
+end

@@ -1,0 +1,50 @@
+<h2>Resend confirmation instructions</h2>
+
+<body>
+
+
+<style>
+.center {
+width:500px;
+height: 450px;
+
+margin: auto;
+align-content: center;
+align-items: center;
+text-align: center;
+
+border: 3px solid black;
+padding: 10px;}
+
+.field {
+  font-size: 30px;
+  height: 70px;
+}
+
+
+
+
+</style>
+
+<div class= "center">
+
+
+
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Resend confirmation instructions" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+</div>
+</div>
+</body>

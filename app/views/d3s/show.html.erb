@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Section number:</strong>
+  <%= @d3.section_number %>
+</p>
+
+<p>
+  <strong>Crime:</strong>
+  <%= @d3.crime %>
+</p>
+
+<p>
+  <strong>Law:</strong>
+  <%= @d3.law %>
+</p>
+
+<%= link_to 'Edit', edit_d3_path(@d3) %> |
+<%= link_to 'Back', d3s_path %>

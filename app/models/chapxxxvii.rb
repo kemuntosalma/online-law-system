@@ -1,0 +1,2 @@
+class Chapxxxvii < ApplicationRecord
+end

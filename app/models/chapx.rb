@@ -1,0 +1,2 @@
+class Chapx < ApplicationRecord
+end

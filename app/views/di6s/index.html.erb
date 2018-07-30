@@ -1,0 +1,154 @@
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+<body>
+   <!-- <div class="wrapper">-->
+        <div class="sidebar" data-color="red" data-image="../assets/img/sidebar.jpg">
+<div class="logo">
+<br>
+                    <ul class="nav">
+                    <li class="active">
+                            <a href="/profiles/new">
+                               <i class="material-icons">house</i>
+                            <h7>HOME</h7> 
+                            </a>
+                        </a>
+                    </li>
+                    </ul>
+                    </br>
+
+
+
+            </li>
+        </ul></br>
+               
+</div>
+
+
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                   <br> <li class="active">
+                        <a href="./index">
+                            <i class="material-icons">library_books</i>
+                            <h7>Laws</h7>
+
+                        </a>
+                    </li></br>
+                    
+                   <br> <li class="active">
+                              <a href="/lawyers">
+                              <i class="material-icons">dashboard</i>
+                            <h7>Lawyers</h7>  
+                            </a>
+                        </a>
+                    </li></br>
+
+                  <br>  <li class="active">
+                            <a href="/profiles/new">
+                               <i class="material-icons">person</i>
+                            <h7>Profile</h7> 
+                            </a>
+                        </a>
+                    </li>
+                    </br>
+          
+                    
+
+                </ul>
+            </div>
+        </div>
+
+       
+        <div class="main-panel">
+            <!--<nav class="navbar navbar-transparent navbar-absolute">-->
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                       
+                            <li>
+                             
+                                    <p class="hidden-lg hidden-md">Dashboard</p>
+                                </a>
+                            </li>
+
+                       <!-- <form class="navbar-form navbar-right" role="search">
+                            <div class="form-group  is-empty">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <span class="material-input"></span>
+                            </div>
+                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                <i class="material-icons">search</i>
+                                <div class="ripple-container"></div>
+                            </button>-->
+                        </form>-
+                    </div>
+                </div>
+            </nav>
+            <div>
+
+
+
+
+
+
+
+
+
+                    <div class="center">
+                     
+<table>
+  <thead>
+    <tr>
+      <th>S</th>
+      <th>C</th>
+      <th>L</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @di6s.each do |di6| %>
+      <tr>
+        <td><%= di6.s %></td>
+        <td><%= di6.c %></td>
+        <td><%= di6.l %></td>
+        <td><%= link_to 'Show', di6 %></td>
+        <td><%= link_to 'Edit', edit_di6_path(di6) %></td>
+        <td><%= link_to 'Destroy', di6, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<%= link_to 'New Di6', new_di6_path %>
+
+<!-- <form class="navbar-form navbar-right" role="search">
+<div class="form-group  is-empty">
+    <input type="text" class="form-control" placeholder="Search">
+    <span class="material-input"></span>
+</div>
+<button type="submit" class="btn btn-white btn-round btn-just-icon">
+    <i class="material-icons">search</i>
+    <div class="ripple-container"></div>
+</button>-->
+</form>-
+</div>
+</div>
+</nav>
+<div>
+
+</body>
+
