@@ -22,7 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-# My-online-law-system
-# ONLINE-LAW-SYSTEM 
-# Online-law-system
 # online-law-system-web-app
