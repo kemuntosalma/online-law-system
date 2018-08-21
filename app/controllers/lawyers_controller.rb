@@ -4,7 +4,17 @@ class LawyersController < ApplicationController
   # GET /lawyers
   # GET /lawyers.json
   def index
-    @lawyers = Lawyer.all
+    if params[:search]
+
+      @lawyers = Lawyer.where(["name LIKE  ?","%#{params[:search]}%"])
+      @lawyers = Lawyer.where(["expertise LIKE  ?","%#{params[:search]}%"])
+
+
+  
+    else
+      @lawyers = Lawyer.all
+  
+    end
   end
 
   # GET /lawyers/1
@@ -69,6 +79,6 @@ class LawyersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lawyer_params
-      params.require(:lawyer).permit(:name, :expertise, :phone_number, :email_address)
+      params.require(:lawyer).permit(:name, :expertise, :phone_number, :email_address, :search)
     end
 end

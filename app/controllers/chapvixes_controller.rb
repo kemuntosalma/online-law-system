@@ -4,9 +4,18 @@ class ChapvixesController < ApplicationController
   # GET /chapvixes
   # GET /chapvixes.json
   def index
-    @chapvixes = Chapvix.all
-  end
+    if params[:search]
 
+      @chapvixes = Chapvix.where(["law LIKE  ?","%#{params[:search]}%"])
+      @chapvixes = Chapvix.where(["crime LIKE  ?","%#{params[:search]}%"])
+
+
+  
+    else
+      @chapvixes = Chapvix.all
+  
+    end
+  end
   # GET /chapvixes/1
   # GET /chapvixes/1.json
   def show
@@ -69,6 +78,6 @@ class ChapvixesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chapvix_params
-      params.require(:chapvix).permit(:section_number, :crime, :law)
+      params.require(:chapvix).permit(:section_number, :crime, :law, :search)
     end
 end

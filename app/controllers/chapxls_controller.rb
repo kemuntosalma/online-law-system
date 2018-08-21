@@ -4,7 +4,17 @@ class ChapxlsController < ApplicationController
   # GET /chapxls
   # GET /chapxls.json
   def index
-    @chapxls = Chapxl.all
+    if params[:search]
+
+      @chapxls = Chapxl.where(["law LIKE  ?","%#{params[:search]}%"])
+      @chapxls = Chapxl.where(["crime LIKE  ?","%#{params[:search]}%"])
+
+
+  
+    else
+      @chapxls = Chapxl.all
+  
+    end
   end
 
   # GET /chapxls/1
@@ -69,6 +79,6 @@ class ChapxlsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chapxl_params
-      params.require(:chapxl).permit(:section_number, :crime, :law)
+      params.require(:chapxl).permit(:section_number, :crime, :law, :search)
     end
 end

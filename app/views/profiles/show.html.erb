@@ -14,6 +14,20 @@
 <body><style>
 
 
+.simple_form .form-group .form-control {
+    color: black;
+    font-size: 30px;
+    border-radius 15px;
+    border: solid 2px purple;
+    width: 300px;
+    height: 29px;
+    font-size: 15px;
+    
+}
+.textarea{
+    border-radius: 10px;
+}
+
 
 
   .left{
@@ -29,9 +43,14 @@
 
   .limiter {
     width: 1000px;
-    height: 700px;
+    height: 550px;
     margin: 0 auto;
+
   }
+
+.nav:hover {    box-shadow: 0 14px 28px rgb(153, 54, 153), 0 5px 5px rgba(0, 0, 0, 0.46);
+}
+
 
 
 .table100:hover{
@@ -39,73 +58,107 @@
 
 }
 
+  .table100.ver3 {
+      margin-left: 19%;
+            margin-right: 20%;
 
-  
-  
- 
+    background-color:white;
+    width: 60%;
+    height: 530px;
+        border: solid 1px purple;
+        border-bottom: solid 1px purple;
 
+
+
+  }
+  .actions{
+      margin-left: 40%;
+  }
+
+a, a:focus {
+    color: black;
+    font-size:16px;
+    width: 60px;
+}
+ a:hover{
+     color:white;
+ }
+ button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 80px;
+  margin-left: 250px;
+}
 
 </style>
-   <!-- <div class="wrapper">-->
-        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar.jpg">
-<div class="logo">
-<br>
-                    <ul class="nav">
-                    <li class="active">
-                            <a href="/landingpage/index">
-                               <i class="material-icons">house</i>
-                            <h7>HOME</h7> 
-                            </a>
-                        </a>
-                    </li>
-                    
-                    </br>
-
-
-
-            </li>
-        </ul></br>
-               
-</div>
+  <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar.jpg">
 
 
             <div class="sidebar-wrapper">
+
+
+             <ul class="nav">
+                   <li class="active">
+                                                  <i class="material-icons">home</i>
+
+                            <a href="/landingpage/index">
+                            <p>Home</p>
+                            
+
+
+                            </a>
+                        </a>
+                    </li></ul>
+                 
+<hr>
+       
+               
+
                 <ul class="nav">
                    <br> <li class="active">
+                                               <i class="material-icons">library_books</i>
+
                         <a href="/dashboard/index">
-                            <i class="material-icons">library_books</i>
-                            <h7>Laws</h7>
+                            <p>Laws</p>
 
                         </a>
                     </li></br></ul>
                                     <ul class="nav">
 
                    <br> <li class="active">
+                                                 <i class="material-icons">dashboard</i>
+
                               <a href="/lawyers">
-                              <i class="material-icons">dashboard</i>
-                            <h7>Lawyers</h7>  
+                            <p>Lawyers</p>  
                             </a>
                         </a>
                     </li></br></ul>
+                
                 <ul class="nav">
 
                   <br>  <li class="active">
+                                                 <i class="material-icons">person</i>
+
                             <a href="/profiles/new">
-                               <i class="material-icons">person</i>
-                            <h7>Profile</h7> 
+                            <p>Profile</p> 
                             </a>
                         </a>
                     </li>
-                    </br>
-          
-                    
+                    </br></ul>
+                <ul class="nav">
 
-                </ul>
+                  </hr>
             </div>
         </div>
 
+       
         <div class="main-panel">
-            <!--<nav class="navbar navbar-transparent navbar-absolute">-->
+
+
+
+       
+        <div class="-panel">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse">
@@ -115,51 +168,39 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse">
                        
-                            <li>
-                             
-                                    <p class="hidden-lg hidden-md">Dashboard</p>
-                                </a>
-                            </li>
 
-                       <!-- <form class="navbar-form navbar-right" role="search">
-                            <div class="form-group  is-empty">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <span class="material-input"></span>
-                            </div>
-                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                <i class="material-icons">search</i>
-                                <div class="ripple-container"></div>
-                            </button>-->
-                        </form>-
+                     
                     </div>
                 </div>
             </nav>
-            <div>
+            <div><br><br><br>
 
+<div class="container">
 
 <div class="limiter">
-                   
+
+      
                     <div class="table100 ver3 m-b-110">
                         <div class="table100-head">
                             <table>
                                 <thead>
                                     <tr class="row100 head">
-                                        <th class="cell100 column1" align: "left">SHOW</th>
+                                        <th class="cell100 column1" align: "left">MY PROFILE</th>
                                         
                                     </tr>
                                 </thead>
                             </table>
                         </div><br><br>
-<%= simple_form_for(@chapvii, ) do |form| %>
+
+
 
 <p>
 <div class="left">
 
-  <strong>First name:</strong>
+  <strong>First name:</strong><text>
   <%= @profile.first_name %>
-</p></div>
+</p></div></text>
 
 <p><div class="left">
 
@@ -175,9 +216,9 @@
 
 <p><div class="left">
 
-  <strong>Email address:</strong>
+ <!--<strong>Email address:</strong>
   <%= @profile.email_address %>
-</p></div>
+</p></div>-->
 
 <p><div class="left">
 
@@ -189,7 +230,7 @@
 
   <strong>Complaint:</strong>
   <%= @profile.complaint %>
-</p></div>
-
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+</p></div><br><br><br><br><br>
+<button>
+<%= link_to 'Edit', edit_profile_path(@profile) %> </button><br>
+ <%# <button><%= link_to 'Back', _form_profiles_path %>

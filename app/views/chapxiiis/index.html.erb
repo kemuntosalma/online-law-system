@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -8,66 +7,187 @@
 <link href="/static/stylesheet/dashboard.css.scss"  rel='stylesheet' type="text/css">
 <link href="/static/stylesheet/application.css.scss"  rel='stylesheet' type="text/css">
 
-<body>
-   <!-- <div class="wrapper">-->
-        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar.jpg">
-<div class="logo">
-<br>
-                    <ul class="nav">
-                    <li class="active">
-                            <a href="/landingpage/index">
-                               <i class="material-icons">house</i>
-                            <h7>HOME</h7> 
-                            </a>
-                        </a>
-                    </li>
-                    
-                    </br>
+<body><style>
+a:visited {
+    color: black;
+    font-size: 11px;
+    size: 11px;
+
+}
+
+
+a, a:focus, a:hover {
+    color: white;
+    font-size:15px;
+
+}
+.table100-body {
+    height: 1000px;
+    overflow: auto;
+    width: 100%;
+}
+
+input, button, select, textarea {
+    font-size: 15px;
+    /* line-height: 1.5; */
+    border-radius:  2px ;
+border: solid 1px grey;
+}
+
+<%# 
+.textarea {
+    align-self:right;
+  } %>
+.right{
+    margin-left: 70%;
+}
+a:visited {
+    color: black;
+    font-size: 12px;
+    size: 12px;
+}
+a, a:focus, a:hover {
+    color: black;
+    font-size: 12px;
+}
+
+
+  .table200.ver10 {
+    background-color: white;
+    width: 97%;
+    height: 590px;
+    align-self: center;
+align-content: center;
+box-align: center;
+justify-content: center;
+/* margin-top: 3%; */
+border-color: rgba(156, 39, 176, 0.28);
+margin-left: 10.5%;
+margin-top: -1.9%;
+    box-shadow: 30 30px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
 
 
 
-            </li>
-        </ul></br>
-               
-</div>
+
+  }
+  input, button, select, textarea {
+    font-size: 12px;
+    /* line-height: 1.5; */
+    border-radius: 2px;
+
+}
+ a:hover {
+    color: white;
+}
+ .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: white;
+      border: 0;
+      width: 1142px;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      border: solid 1px rgba(128, 128, 128, 0.392);
+      box-shadow: 10px 10px 10px -10px rgba(68, 68, 68, 0), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
+margin-left: 15.5%;
+
+      
+  }
+
+.sidebar .nav li .nav-link p, body>.navbar-collapse .nav li .nav-link p {
+    margin: 0;
+    line-height: 31px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-flex;
+        text-transform: uppercase;
+
+}
+.button{margin-left: 80px;}
+
+
+
+
+</style>
+         <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar.jpg">
 
 
             <div class="sidebar-wrapper">
+
+
+             <ul class="nav">
+                   <li class="active">
+                                                  <i class="material-icons">home</i>
+
+                                        <%= link_to "Logout", destroy_user_session_path, method: :delete   %> 
+                            
+
+                       
+                    </li></br></ul>
+                 
+<hr>
+       
+               
+
                 <ul class="nav">
                    <br> <li class="active">
+                                               <i class="material-icons">library_books</i>
+
                         <a href="/dashboard/index">
-                            <i class="material-icons">library_books</i>
-                            <h7>Laws</h7>
+                            <p>Laws</p>
 
                         </a>
                     </li></br></ul>
                                     <ul class="nav">
 
                    <br> <li class="active">
+                                                 <i class="material-icons">dashboard</i>
+
                               <a href="/lawyers">
-                              <i class="material-icons">dashboard</i>
-                            <h7>Lawyers</h7>  
+                            <p>Lawyers</p>  
                             </a>
                         </a>
                     </li></br></ul>
+                
                 <ul class="nav">
 
                   <br>  <li class="active">
+                                                 <i class="material-icons">person</i>
+
                             <a href="/profiles/new">
-                               <i class="material-icons">person</i>
-                            <h7>Profile</h7> 
+                            <p>Profile</p> 
                             </a>
                         </a>
-                    </li>
-                    </br>
-          
-                    
+                    </li></br></ul>
+ 
 
-                </ul>
+                  </hr>
             </div>
         </div>
+
+       
         <div class="main-panel">
-            <!--<nav class="navbar navbar-transparent navbar-absolute">-->
+           
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                   
+                </div>
+            </nav>
+            <div>
+
+
+
+
+
+       
+        <div class="main-panel">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse">
@@ -77,51 +197,61 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse">
                        
-                            <li>
-                             
-                                    <p class="hidden-lg hidden-md">Dashboard</p>
-                                </a>
-                            </li>
 
-                       <!-- <form class="navbar-form navbar-right" role="search">
-                            <div class="form-group  is-empty">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <span class="material-input"></span>
-                            </div>
-                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                <i class="material-icons">search</i>
-                                <div class="ripple-container"></div>
-                            </button>-->
-                        </form>-
+                     
                     </div>
                 </div>
             </nav>
             <div>
+            
+<div class="container">
 
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+                     
+<%= form_tag chapxiiis_path, :method => 'get' do %>  
+<br>                                                                       
+<%= text_field_tag :search, params[:search],  placeholder: 'Search' %>
+  <%= submit_tag 'Search', class: "btn btn-primary", crime: nil%>
+<% end %></div></div></nav><br><br><br><br><br>
+                    <div class="table200 ver10 m-b-110">
 
 <div class="limiter">
+
                    
                     <div class="table100 ver3 m-b-110">
+                    
                         <div class="table100-head">
                             <table>
                                 <thead>
                                     <tr class="row100 head">
-                                        <th class="cell100 column1" align: "left">MY PROFILE</th>
+ <th class="cell100 column1">Miscellaneous offences against public authority
+   <%# <%= link_to 'Back', dashboard_index_path %> 
+   
+</th>
                                         
                                     </tr>
                                 </thead>
                             </table>
-                        </div><br><br>
- <div class="table100-body js-pscroll">
+                        </div>
+ <%# <div class="table100-body js-pscroll"> %>
   <table border="2" align="center" >
-                                <tbody>                         
-<thead>
+                               <tbody> 
+                                         <% if current_user.admin %>
+                                                                         <button>
 
+
+                            <%= link_to 'New Law', new_chapxiii_path %><% end %></button>
+                        
+<thead>
+<br>
     <tr>
+                 
            
-      <th>Section number</th>
+      <th>Section_number</th>
       <th>Crime</th>
       <th>Law</th>
       <th colspan="3"></th>
@@ -130,23 +260,28 @@
 
   <tbody>
     <% @chapxiiis.each do |chapxiii| %>
-      <tr>
-        <td><%= chapxiii.section_number %></td>
+		<tr class="row100 body">
+        <td ><%= chapxiii.section_number %></td>
         <td><%= chapxiii.crime %></td>
         <td><%= chapxiii.law %></td>
-                 <% if current_user.admin %>
+         <% if current_user.admin %>
 
-        <td><%= link_to 'Show', chapxiii %></td>
-        <td><%= link_to 'Edit', edit_chapxiii_path(chapxiii) %></td>
-        <td><%= link_to 'Destroy', chapxiii, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td> <button> <%= link_to 'Show', chapxiii %></td></button>
+       <td><button><%= link_to 'Edit', edit_chapxiii_path(chapxiii) %></td></button>
+       <td><button><%= link_to 'Destroy', chapxiii, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+         
       </tr>
-    <% end %>
+          <% end %>
+
     <% end %>
   </tbody>
 </table>
 
-<br>
-         <% if current_user.admin %>
+        
 
-<%= link_to 'New Chapxiii', new_chapxiii_path %><% end %>
 </div>
+</body>
+
+
+
+

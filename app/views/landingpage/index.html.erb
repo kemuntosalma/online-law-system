@@ -19,7 +19,7 @@
   }
   h3, h4 {
       margin: 10px 0 30px 0;
-      letter-spacing: 10px;      
+      letter-spacing: 2px;      
       font-size: 20px;
       color: #111;
   }
@@ -73,7 +73,7 @@
   }
 
   carousel-inner>.item>a>img, .carousel-inner>.item>img {
-   height:1000px;
+   height:665px;;
 }
   .carousel-caption h3 {
       color: #fff !important;
@@ -86,6 +86,11 @@
   .bg-1 {
       background:  rgb(21, 19, 19);
       color: #bdbdbd;
+  }
+
+  .bg-2{
+      background:  white;
+      color: white;
   }
   .bg-1 h3 {color: #fff;}
   .bg-1 p {font-style: italic;}
@@ -113,6 +118,26 @@
       border-radius: 0;
       transition: .2s;
   }
+
+ .h2, .h3, .h4, .h5, .h6, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: 15px;
+    color: white;
+ text-align: center;
+    text-justify: inter-word;
+    }
+    h1{
+      font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: 17px;
+    color: black;
+ text-align: center;
+    text-justify: inter-word;
+
+    }
   .btn:hover, .btn:focus {
       border: 1px solid #333;
       background-color: #fff;
@@ -135,41 +160,7 @@
       height: 400px;
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
-  }  
-  .navbar {
-      font-family: Montserrat, sans-serif;
-      margin-bottom: 0;
-      background-color: #2d2d30;
-      border: 0;
-      font-size: 11px !important;
-      letter-spacing: 4px;
-      opacity: 0.9;
-  }
-  .navbar li a, .navbar .navbar-brand { 
-      font-size: 19px;
-            color: white;
-
-  }
-  .navbar-nav li a:hover {
-      color: grey  !important;
-
-  }
-  .navbar-nav li.active a {
-      color: #fff !important;
-      background-color: #29292c !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-  }
-  navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-    color: #555;
-    background-color: transparent;
-}
-  .open .dropdown-toggle {
-      color: grey;
-      background-color:  !important;
-      
-  }
+  } 
 
   .dropdown-menu li a {
       color: #000 !important;
@@ -199,12 +190,15 @@
   .centered {
     position: absolute;
     top: 50%;
-    left: 50%;
+
+      opacity: 0.8;
+    width: 100%;
     font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 100px;
+    font-size:80px;
     color: black;;
     font-weight: 200px;
     transform: translate(-50%, -50%);
+    background-color: white;
 }
 
 
@@ -222,6 +216,24 @@
 
   color:black;
 }
+.hr{
+  color: grey;
+}
+
+.w3-white, .w3-hover-white:hover {
+    color: #000!important;
+    background-color: #fff!important;
+}
+.w3-card, .w3-card-2 {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+
+
+.w3-bar {
+    width: 100%;
+    overflow: hidden;
+}
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -235,14 +247,14 @@
         <span class="icon-bar"></span>                        
       </button>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+<div class="w3-top">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#myPage">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#team">THE TEAM</a></li>
+        <li class><a href="#myPage">HOME</a></li>
+        <li class><a href="#about">ABOUT</a></li>
+        <%# <li><a href="#team">THE TEAM</a></li> %>
         <li><a href="#contact">CONTACT</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="">REGISTER
+          <a class="dropdown-toggle" data-toggle="dropdown" href="">ACCOUNT
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
            <li><% if user_signed_in? %></li>
@@ -269,17 +281,18 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <%= image_tag("pik11.jpg", :height =>"300px", :width =>"700px") %>  
-          <div class="centered">MALONZA LAW FIRM</div>
+        <%= image_tag("pik11.jpg", :height =>"200px", :width =>"700px") %> 
+         
+           <div class="centered"><h1 style= font-size:60px >MALONZA LAW FIRM</h1></div> 
        
 
         <div class="carousel-caption">
         </div>      
       </div>
 
-      <div class="item">
+    <!--  <div class="item">
         <%= image_tag("pik10.jpg", :height =>"80%", :width =>"700px") %>
-                  <div class="centered">WE OFFER ALL KINDS OF LEGAL HELP</div>
+                  <%# <div class="centered">WE OFFER ALL KINDS OF LEGAL HELP</div> %>
 
         <div class="carousel-caption">
          
@@ -288,16 +301,16 @@
     
       <div class="item">
         <%= image_tag("pik1.jpg", :height =>"80%", :width =>"700px") %>
-                  <div class="centeredd">READY TO SERVE YOU </div>
+                  <%# <div class="centeredd">READY TO SERVE YOU </div> %>
 
         <div class="carousel-caption">
          
         </div>      
       </div>
-    </div>
+    </div>-->
 
     <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <!--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
@@ -305,24 +318,27 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-</div>
+</div>-->
 
 
 
 
 
-<div id="about" class="bg-1">
+<div id="about" class="bg-2">
   <div class="container">
-    <h3 class="text-center">SERVICES</h3>
-    <h2 > This is a medium size law firm that was 
-    established in 2012 that provides specialised legal services areas pertaining the penal code our with skilled
-     personnel our services include Commercial Law, Litigation and arbitration, family law, intellectual property, Tax law.</h>
-   <h2 > Our goal is to provide our clients with quality legal services. We advise our clients of their legal rights, fight to ensure their rights are protected, and do this in a fair and ethical manner.
-
+    <h1 class="text-center">ABOUT US</h2><hr>
+    <h1 > There is a rise in the amount of crime in our country and most of the people are unaware of the 
+    criminal laws under Penal Code. Therefore it becomes necessary to make the citizens aware of all kinds of
+     laws put forth by our constitution against crime so that people come forward to register case against it</h1>
+   <h1 > The goal of our company is to provide our clients with quality legal services. We advise our clients of their
+    legal rights, fight to ensure their rights are protected, and do this in a fair and ethical manner.</h1>
+<h1>The website contains all the laws of the Penal so 
+that people can come and search for the law for respective crime and also provides a list of lawyers to choose from</h1>
+  <h1>A form is provided where user can register case and the form is sent to the law firm</h1>
    
    
    
-   </br></br></br></br></br></br></br></br></br></br></br></br>
+   </br></br></br></br></br></br>
     
     
         </div>
@@ -368,67 +384,18 @@
 </div>
 
 
-<!-- Container (The team Section) -->
-<div id="team" class="container text-center">
-  <h3>THE TEAM</h3>
-  <h2> Meet the team incharge of all the legal services</h2>
-  <div class="row">
-    <div class="col-sm-4">
-      <a href="#demo" data-toggle="collapse"> 
-      
-      
-        <%= image_tag("pik1.jpg", :height =>"255", :width =>"255") %>
-              <p class="text-center"><strong>Name</strong></p><br>
-
-      </a>
-      <div id="demo" class="collapse">
-        <p>Guitarist and Lead Vocalist</p>
-        <p>Loves long walks on the beach</p>
-        <p>Member since 1988</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <a href="#demo2" data-toggle="collapse">
-        <%= image_tag("pik1.jpg", :height =>"255", :width =>"255") %>
-              <p class="text-center"><strong>Name</strong></p><br>
-
-        
-      </a>
-      <div id="demo2" class="collapse">
-        <p>Drummer</p>
-        <p>Loves drummin'</p>
-        <p>Member since 1988</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <a href="#demo3" data-toggle="collapse">
-        <%= image_tag("pik1.jpg", :height =>"255", :width =>"255") %>
-              <p class="text-center"><strong>Name</strong></p><br>
-
-      </a>
-      <div id="demo3" class="collapse">
-        <p>Bass player</p>
-        <p>Loves math</p>
-        <p>Member since 2005</p>
-      </div>
-    </div>
-  </div>
-</div></br></br></br></br></br></br>
-
-<!-- Container (about Section) -->
-
-<!-- Container (Contact Section) -->
-
-
 
 <div id="contact" class="bg-1">
   <div class="container">
-   <div class="col-md-4">
-      <h3><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
-      <h3><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
-      <h3><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
+   <div class="col-md-7">
+   
+      <h3><span class="glyphicon glyphicon-map-marker"></span>Nairobi, Kenya</p>
+      <h3><span class="glyphicon glyphicon-phone"></span>Phone_Number +254727808457</p>
+      <h3><span class="glyphicon glyphicon-envelope"></span>Email: ols@mail.com</p>
     </div></br></br></br></br></br></br></br>
-    
+
+
+    <hr><h2> All rights reserved</h2></hr></div>
    
         </div>
       </div>
@@ -462,7 +429,7 @@ $(document).ready(function(){
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 900, function(){
+      }, 1200, function(){
    
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;

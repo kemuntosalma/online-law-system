@@ -4,7 +4,17 @@ class ChapxisController < ApplicationController
   # GET /chapxis
   # GET /chapxis.json
   def index
-    @chapxis = Chapxi.all
+    if params[:search]
+
+      @chapxis = Chapxi.where(["law LIKE  ?","%#{params[:search]}%"])
+      @chapxis = Chapxi.where(["crime LIKE  ?","%#{params[:search]}%"])
+
+
+  
+    else
+      @chapxis = Chapxi.all
+  
+    end
   end
 
   # GET /chapxis/1
@@ -69,6 +79,6 @@ class ChapxisController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chapxi_params
-      params.require(:chapxi).permit(:section_number, :crime, :law)
+      params.require(:chapxi).permit(:section_number, :crime, :law, :search)
     end
 end

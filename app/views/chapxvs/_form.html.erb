@@ -1,4 +1,5 @@
 
+
 <p id="notice"><%= notice %></p>
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
@@ -9,93 +10,78 @@
 <link href="/static/stylesheet/dashboard.css.scss"  rel='stylesheet' type="text/css">
 <link href="/static/stylesheet/application.css.scss"  rel='stylesheet' type="text/css">
 
-<body><style>
+<body>
+<style>
 
-  .simple_form .form-group .form-control {
-    color: black;
-    border: solid 2px purple;
-    width: 800px;
-    height: 45px;
-    
+.actions{
+  margin-right: 10px;
 }
-
-
-  .limiter {
-    width: 1000px;
-    margin: 0 auto;
-  }
-
-
-.table100:hover{
-        box-shadow: 30 30px 30px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
-
-}
-  
-  
- 
-
-
 </style>
-   <!-- <div class="wrapper">-->
-        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar.jpg">
-<div class="logo">
-<br>
-                    <ul class="nav">
-                    <li class="active">
-                            <a href="/landingpage/index">
-                               <i class="material-icons">house</i>
-                            <h7>HOME</h7> 
-                            </a>
-                        </a>
-                    </li>
-                    
-                    </br>
-
-
-
-            </li>
-        </ul></br>
-               
-</div>
+  <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar.jpg">
 
 
             <div class="sidebar-wrapper">
+
+
+             <ul class="nav">
+                   <li class="active">
+                                                  <i class="material-icons">home</i>
+
+                                        <%= link_to "Logout", destroy_user_session_path, method: :delete   %> 
+                            
+
+                       
+                    </li></br></ul>
+                 
+<hr>
+       
+               
+
                 <ul class="nav">
                    <br> <li class="active">
+                                               <i class="material-icons">library_books</i>
+
                         <a href="/dashboard/index">
-                            <i class="material-icons">library_books</i>
-                            <h7>Laws</h7>
+                            <p>Laws</p>
 
                         </a>
                     </li></br></ul>
                                     <ul class="nav">
 
                    <br> <li class="active">
+                                                 <i class="material-icons">dashboard</i>
+
                               <a href="/lawyers">
-                              <i class="material-icons">dashboard</i>
-                            <h7>Lawyers</h7>  
+                            <p>Lawyers</p>  
                             </a>
                         </a>
                     </li></br></ul>
+                
                 <ul class="nav">
 
                   <br>  <li class="active">
+                                                 <i class="material-icons">person</i>
+
                             <a href="/profiles/new">
-                               <i class="material-icons">person</i>
-                            <h7>Profile</h7> 
+                            <p>Profile</p> 
                             </a>
                         </a>
                     </li>
-                    </br>
-          
-                    
+                    </br></ul>
+                <ul class="nav">
 
-                </ul>
+                  </hr>
             </div>
         </div>
 
+       
         <div class="main-panel">
-            <!--<nav class="navbar navbar-transparent navbar-absolute">-->
+
+    
+
+
+       
+        <div class="-panel">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse">
@@ -105,44 +91,34 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse">
                        
-                            <li>
-                             
-                                    <p class="hidden-lg hidden-md">Dashboard</p>
-                                </a>
-                            </li>
 
-                       <!-- <form class="navbar-form navbar-right" role="search">
-                            <div class="form-group  is-empty">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <span class="material-input"></span>
-                            </div>
-                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                <i class="material-icons">search</i>
-                                <div class="ripple-container"></div>
-                            </button>-->
-                        </form>-
+                     
                     </div>
                 </div>
             </nav>
             <div>
-
-
+<div class="container">
+<!--<div class="right">
+<%= form_tag chapxxxvs_path, :method => 'get' do %>                                                                         
+<%= text_field_tag :search, params[:search] %>
+  <%= submit_tag 'Search',  crime: nil %>
+<% end %></div>
+<br><br>-->
 <div class="limiter">
-                   
-                    <div class="table100 ver3 m-b-110">
+
+      
+                    <div class="table100 ver5 m-b-110">
                         <div class="table100-head">
                             <table>
                                 <thead>
-                                    <tr class="row100 head">
+                                    <tr clss="row100 head">
                                         <th class="cell100 column1" align: "left">CREATE NEW</th>
                                         
                                     </tr>
                                 </thead>
                             </table>
                         </div><br><br>
-
   
 <%= simple_form_for(@chapxv, local: true) do |form| %>
   <% if chapxv.errors.any? %>

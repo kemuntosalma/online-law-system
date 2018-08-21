@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_27_111715) do
+ActiveRecord::Schema.define(version: 2018_08_12_142713) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -269,6 +269,14 @@ ActiveRecord::Schema.define(version: 2018_07_27_111715) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "chapxxviiis", force: :cascade do |t|
+    t.text "section_number"
+    t.text "crime"
+    t.text "law"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "chapxxviis", force: :cascade do |t|
     t.text "section_number"
     t.text "crime"
@@ -334,6 +342,14 @@ ActiveRecord::Schema.define(version: 2018_07_27_111715) do
   end
 
   create_table "chapxxxixes", force: :cascade do |t|
+    t.text "section_number"
+    t.text "crime"
+    t.text "law"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "chapxxxviiis", force: :cascade do |t|
     t.text "section_number"
     t.text "crime"
     t.text "law"

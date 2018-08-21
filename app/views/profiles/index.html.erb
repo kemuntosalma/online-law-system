@@ -5,71 +5,149 @@
       rel="stylesheet">
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
-<link href="/static/stylesheet/dashboard.css.scss"  rel='stylesheet' type="text/css">
-<link href="/static/stylesheet/application.css.scss"  rel='stylesheet' type="text/css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+
+<link rel="stylesheet" href="/assets/stylesheets/mycard.scss" type="text/css">
 <body>
-   <!-- <div class="wrapper">-->
-        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar.jpg">
-<div class="logo">
-<br>
-                    <ul class="nav">
-                    <li class="active">
-                            <a href="/landingpage/index">
-                               <i class="material-icons">house</i>
-                            <h7>HOME</h7> 
-                            </a>
-                        </a>
-                    </li>
-                    
-                    </br>
+<style>
 
 
 
-            </li>
-        </ul></br>
-               
-</div>
+  .table100.ver3 {
+    background-color:white;
+   height: 580px;
+   border: solid 2px purple;
+
+
+  }
+  
+  .table100.ver3 th {
+     font-family: Lato-Bold;
+    font-size: 13px;
+    color:white;
+    line-height: 1.4;
+    text-transform: uppercase;
+    background-color: #33033c;
+
+  }
+  
+  .table100.ver3 td {
+    font-family: Lato-Regular;
+    font-size: 12px;
+    color: white;
+    line-height: 1.4;
+    background-color: #33033c;
+    border-color: solid black;
+    margin-left: 7px;
+    margin-right: 7px;
+
+    width: 100%;
+
+    
+  }
+
+
+  .table100-body {
+    max-height: 700px;
+    overflow: auto;
+    width: 100%;
+    height: 900px;
+}
+
+.nav:hover {    box-shadow: 0 14px 28px rgb(153, 54, 153), 0 5px 5px rgba(0, 0, 0, 0.46);
+}
+ button {
+    font-family: inherit;
+    font-size: 20px;
+    line-height: inherit;
+    width: 80px;
+    height: 29px;
+}
+a, a:focus {
+    color: black;
+    font-size:12px;
+    width: 60px;
+}
+ a:hover{
+     color:white;
+ }
+
+
+
+</style>
+  <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar.jpg">
 
 
             <div class="sidebar-wrapper">
+
+
+             <ul class="nav">
+                   <li class="active">
+                                                  <i class="material-icons">home</i>
+
+                            <a href="/landingpage/index">
+                            <p>Home</p>
+                            
+
+
+                            </a>
+                        </a>
+                    </li></ul>
+                 
+<hr>
+       
+               
+
                 <ul class="nav">
                    <br> <li class="active">
+                                               <i class="material-icons">library_books</i>
+
                         <a href="/dashboard/index">
-                            <i class="material-icons">library_books</i>
-                            <h7>Laws</h7>
+                            <p>Laws</p>
 
                         </a>
                     </li></br></ul>
                                     <ul class="nav">
 
                    <br> <li class="active">
+                                                 <i class="material-icons">dashboard</i>
+
                               <a href="/lawyers">
-                              <i class="material-icons">dashboard</i>
-                            <h7>Lawyers</h7>  
+                            <p>Lawyers</p>  
                             </a>
                         </a>
                     </li></br></ul>
+                
                 <ul class="nav">
 
                   <br>  <li class="active">
+                                                 <i class="material-icons">person</i>
+
                             <a href="/profiles/new">
-                               <i class="material-icons">person</i>
-                            <h7>Profile</h7> 
+                            <p>Profile</p> 
                             </a>
                         </a>
                     </li>
-                    </br>
-          
-                    
+                    </br></ul>
+                <ul class="nav">
 
-                </ul>
+                  </hr>
             </div>
         </div>
 
+       
         <div class="main-panel">
-            <!--<nav class="navbar navbar-transparent navbar-absolute">-->
-                <div class="container-fluid">
+
+        <!--   <nav class="navbar navbar-transparent navbar-absolute">
+ <ps>
+ 
+
+
+                      <%= link_to "Logout", destroy_user_session_path, method: :delete   %> </ps>
+             
+
+                </nav>-->
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse">
                             <span class="sr-only">Toggle navigation</span>
@@ -78,67 +156,39 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse">
-                       
-                            <li>
-                             
-                                    <p class="hidden-lg hidden-md">Dashboard</p>
-                                </a>
-                            </li>
-
-                       <!-- <form class="navbar-form navbar-right" role="search">
-                            <div class="form-group  is-empty">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <span class="material-input"></span>
-                            </div>
-                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                <i class="material-icons">search</i>
-                                <div class="ripple-container"></div>
-                            </button>-->
-                        </form>-
-                    </div>
-                </div>
-            </nav>
-            <div>
-
-
-        <div class="main-panel">
-            <!--<nav class="navbar navbar-transparent navbar-absolute">-->
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                       
-                            <li>
-                             
-                                    <p class="hidden-lg hidden-md">Dashboard</p>
-                                </a>
-                            </li>
-
-                       <!-- <form class="navbar-form navbar-right" role="search">
-                            <div class="form-group  is-empty">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <span class="material-input"></span>
-                            </div>
-                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                <i class="material-icons">search</i>
-                                <div class="ripple-container"></div>
-                            </button>-->
-                        </form>-
-                    </div>
-                </div>
-            </nav>
-            <div>
-
-
-<div class="limiter">
                    
+                </div>
+            </nav>
+            <div>
+
+
+
+
+
+       
+        <div class="-panel">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                       
+
+                     
+                    </div>
+                </div>
+            </nav>
+            <div>
+<div class="container">
+                 
+<div class="limiter">
+
+      
+                     
                     <div class="table100 ver3 m-b-110">
                         <div class="table100-head">
                             <table>
@@ -150,16 +200,18 @@
                                 </thead>
                             </table>
                         </div><br><br>
- <div class="table100-body js-pscroll">
+ <%# <div class="table100-body js-pscroll"> %>
   <table border="2" align="center" >
-                                <tbody>                         
+                                <tbody> 
+                                <button>
+                            <%= link_to 'New Profile', new_profile_path %></button>
+                        
 <thead>
-
     <tr>
-                                 <br> <th>First name</th></br>
-                                  <br><th>Second name</th></br>
+                                 <th>First name</th>
+                                  <th>Second name</th>
                                   <th>Phone numbe</th>
-                                  <th>Email address</th>
+                                  <%# <th>Email address</th> %>
                                   <th>Lawyer</th>
                                   <th>Complaint</th>
                                   <th colspan="3"></th>
@@ -172,7 +224,7 @@
                                     <td><%= profile.first_name %></td>
                                     <td><%= profile.second_name %></td>
                                     <td><%= profile.phone_numbe %></td>
-                                    <td><%= profile.email_address %></td>
+                                    <%# <td><%= profile.email_address %>
                                     <td><%= profile.lawyer %></td>
                                     <td><%= profile.complaint %></td>
                                     <td><%= link_to 'Show', profile %></td>
@@ -185,20 +237,9 @@
                             
                             <br>
                             
-                            <%= link_to 'New Profile', new_profile_path %>
                             
 
 
-                       <!-- <form class="navbar-form navbar-right" role="search">
-                            <div class="form-group  is-empty">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <span class="material-input"></span>
-                            </div>
-                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                <i class="material-icons">search</i>
-                                <div class="ripple-container"></div>
-                            </button>-->
-                        </form>-
                     </div>
                 </div>
             </nav>

@@ -4,9 +4,18 @@ class ChapxxxiisController < ApplicationController
   # GET /chapxxxiis
   # GET /chapxxxiis.json
   def index
-    @chapxxxiis = Chapxxxii.all
-  end
+    if params[:search]
 
+      @chapxxxiis = Chapxxxii.where(["law LIKE  ?","%#{params[:search]}%"])
+      @chapxxxiis = Chapxxxii.where(["crime LIKE  ?","%#{params[:search]}%"])
+
+
+  
+    else
+      @chapxxxiis = Chapxxxii.all
+  
+    end
+  end
   # GET /chapxxxiis/1
   # GET /chapxxxiis/1.json
   def show
@@ -69,6 +78,6 @@ class ChapxxxiisController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chapxxxii_params
-      params.require(:chapxxxii).permit(:section_number, :crime, :law)
+      params.require(:chapxxxii).permit(:section_number, :crime, :law, :search)
     end
 end

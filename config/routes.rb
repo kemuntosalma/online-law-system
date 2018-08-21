@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :posts
+  resources :chapxxxviiis
+  resources :chapxxviiis
   resources :lawyers
   resources :chapxliis
   resources :chapxlis
@@ -49,27 +50,12 @@ Rails.application.routes.draw do
   resources :chapvis
   get 'division1/index'
   get 'chapter1/index'
-  resources :di8s
-  resources :di7s
-  resources :di6s
-  resources :di5s
-  resources :di4s
-  resources :di3s
-  resources :di2s
-  resources :di1s
   resources :divi2s
   resources :divi1s
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   get 'dashboard/index'
-  resources :d8s
-  resources :d7s
-  resources :d6s
-  resources :d5s
-  resources :d4s
-  resources :d3s
-  resources :d2s
-  resources :d1s
+  get 'posts/index'
   resources :profiles
   root 'landingpage#index'
   get 'landingpage/about'

@@ -15,96 +15,78 @@
 
 
 
-
-  .left{
-    width: 200px;
-    height: 45px;
-    align-content:"center";
-    align-items: "center";
-    align-self: "center"
-    
-    
+a, a:focus {
+    color: black;
+    font-size:16px;
+    width: 60px;
 }
-
-
-  .limiter {
-    width: 1000px;
-    height: 700px;
-    margin: 0 auto;
-  }
-
-
-.table100:hover{
-        box-shadow: 30 30px 30px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
-
-}
-
-
-  
-  
- 
-
+ a:hover{
+     color:white;
+ }
 
 </style>
-   <!-- <div class="wrapper">-->
-        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar.jpg">
-<div class="logo">
-<br>
-                    <ul class="nav">
-                    <li class="active">
-                            <a href="/landingpage/index">
-                               <i class="material-icons">house</i>
-                            <h7>HOME</h7> 
-                            </a>
-                        </a>
-                    </li>
-                    
-                    </br>
-
-
-
-            </li>
-        </ul></br>
-               
-</div>
+  <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar.jpg">
 
 
             <div class="sidebar-wrapper">
+
+
+             <ul class="nav">
+                   <li class="active">
+                                                  <i class="material-icons">home</i>
+
+                                        <%= link_to "Logout", destroy_user_session_path, method: :delete   %> 
+                            
+
+                       
+                    </li></br></ul>
+                 
+<hr>
+
                 <ul class="nav">
                    <br> <li class="active">
+                                               <i class="material-icons">library_books</i>
+
                         <a href="/dashboard/index">
-                            <i class="material-icons">library_books</i>
-                            <h7>Laws</h7>
+                            <p>Laws</p>
 
                         </a>
                     </li></br></ul>
                                     <ul class="nav">
 
                    <br> <li class="active">
+                                                 <i class="material-icons">dashboard</i>
+
                               <a href="/lawyers">
-                              <i class="material-icons">dashboard</i>
-                            <h7>Lawyers</h7>  
+                            <p>Lawyers</p>  
                             </a>
                         </a>
                     </li></br></ul>
+                
                 <ul class="nav">
 
                   <br>  <li class="active">
+                                                 <i class="material-icons">person</i>
+
                             <a href="/profiles/new">
-                               <i class="material-icons">person</i>
-                            <h7>Profile</h7> 
+                            <p>Profile</p> 
                             </a>
                         </a>
                     </li>
-                    </br>
-          
-                    
+                    </br></ul>
+                <ul class="nav">
 
-                </ul>
+                  </hr>
             </div>
         </div>
+
+       
         <div class="main-panel">
-            <!--<nav class="navbar navbar-transparent navbar-absolute">-->
+
+
+
+       
+        <div class="-panel">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse">
@@ -114,38 +96,25 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse">
                        
-                            <li>
-                             
-                                    <p class="hidden-lg hidden-md">Dashboard</p>
-                                </a>
-                            </li>
 
-                       <!-- <form class="navbar-form navbar-right" role="search">
-                            <div class="form-group  is-empty">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <span class="material-input"></span>
-                            </div>
-                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                <i class="material-icons">search</i>
-                                <div class="ripple-container"></div>
-                            </button>-->
-                        </form>-
+                     
                     </div>
                 </div>
             </nav>
             <div>
-
+<div class="container">
+<br><br>
 
 <div class="limiter">
-                   
-                    <div class="table100 ver3 m-b-110">
+
+      
+                    <div class="table100 ver5 m-b-110">
                         <div class="table100-head">
                             <table>
                                 <thead>
                                     <tr class="row100 head">
-                                        <th class="cell100 column1" align: "left">SHOW</th>
+                                        <th class="cell100 column1" align: "left">CREATED PENAL CODE</th>
                                         
                                     </tr>
                                 </thead>
@@ -166,7 +135,6 @@
   <%= @chapxvi.crime %>
 </p></div>
 
-<div class="center">
 
 <p><div class="left">
 
@@ -174,10 +142,9 @@
   <%= @chapxvi.law %>
 </p></div>
 
-<p><div class="left">
 
-<%= link_to 'Edit', edit_chapxvi_path(@chapxvi) %> |
-<%= link_to 'Back', chapxvis_path %>
+<button><%= link_to 'Edit', edit_chapxvi_path(@chapxvi) %> </button>
+<button><%= link_to 'Back', chapxvis_path %></button>
 </div>
 
 <% end %>
