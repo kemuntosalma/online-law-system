@@ -1,5 +1,51 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+      resources :users
+      resources :chapvis
+      resources :chapviis
+      resources :chapviiis
+      resources :chapvixes
+      resources :chapxes
+      resources :chapxis
+      resources :chapxiis
+      resources :chapxiiis
+      resources :chapxivs
+      resources :chapxixes
+      resources :chapxls
+      resources :chapxlis
+      resources :chapxliis
+      resources :chapxvs
+      resources :chapxvis
+      resources :chapxviis
+      resources :chapxviiis
+      resources :chapxxes
+      resources :chapxxis
+      resources :chapxxiis
+      resources :chapxxiiis
+      resources :chapxxivs
+      resources :chapxxixes
+      resources :chapxxvs
+      resources :chapxxvis
+      resources :chapxxviis
+      resources :chapxxviiis
+      resources :chapxxxes
+      resources :chapxxxis
+      resources :chapxxxiis
+      resources :chapxxxiiis
+      resources :chapxxxivs
+      resources :chapxxxixes
+      resources :chapxxxvs
+      resources :chapxxxvis
+      resources :chapxxxviis
+      resources :chapxxxviiis
+      resources :divi1s
+      resources :divi2s
+      resources :lawyers
+      resources :profiles
+
+      root to: "users#index"
+    end
   resources :chapxxxviiis
   resources :chapxxviiis
   resources :lawyers
